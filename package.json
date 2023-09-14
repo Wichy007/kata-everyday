@@ -1,7 +1,16 @@
 {
   "devDependencies": {
-    "install": "^0.13.0",
-    "jest": "^29.7.0",
-    "npm": "^10.1.0"
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
