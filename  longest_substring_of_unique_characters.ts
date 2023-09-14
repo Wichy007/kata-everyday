@@ -2,7 +2,7 @@
 
 export default function longestSubstr(s: string): number {
     const letterArray = s.split('');
-    let storageArraay = [];
+    let storageArraay: string[] = [];
     let current = 0
     let longest = 0
 
