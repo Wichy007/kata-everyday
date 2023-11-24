@@ -6,10 +6,10 @@ func Kata1(input []int) []int {
 	result := []int{}
 
 	for _, e := range input {
-		if e == 2 {
-			result = append(result, e*e)
-		} else {
+		if int(math.Sqrt(float64(e)))*int(math.Sqrt(float64(e))) == e {
 			result = append(result, int(math.Sqrt(float64(e))))
+		} else {
+			result = append(result, e*e)
 		}
 	}
 	return result
