@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestKata1(t *testing.T) {
+func TestKata2(t *testing.T) {
 	t.Run("should return 2 if it prime number", func(t *testing.T) {
 		result := kata2.Divisors(5)
 		assert.Equal(t, 2, result)
