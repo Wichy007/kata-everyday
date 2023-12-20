@@ -1,20 +1,15 @@
 package kata3
 
-func CreatePhoneNumber(numbers [10]uint) []string {
-	result := []string{}
-	for i := 0; i < 14; i++ {
-		if i == 0 {
-			result = append(result, "(")
-		} else if i == 4 {
-			result = append(result, ")")
-		} else if i == 5 {
-			result = append(result, " ")
-		} else if i == 9 {
-			result = append(result, "-")
-		} else {
-			// result = append(result, strconv.Itoa(numbers[i]))
-		}
-	}
+import (
+	"fmt"
+	"strings"
+)
 
-	return result
+func CreatePhoneNumber(numbers [10]uint) string {
+
+	range1 := strings.Join([]string{fmt.Sprintf("%d%d%d", numbers[0], numbers[1], numbers[2])}, "")
+	range2 := strings.Join([]string{fmt.Sprintf("%d%d%d", numbers[3], numbers[4], numbers[5])}, "")
+	range3 := strings.Join([]string{fmt.Sprintf("%d%d%d%d", numbers[6], numbers[7], numbers[8], numbers[9])}, "")
+
+	return fmt.Sprintf("(%s) %s-%s", range1, range2, range3)
 }
