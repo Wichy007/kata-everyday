@@ -1,9 +1,17 @@
 package kata4
 
-import "strings"
+import (
+	"strings"
+)
 
 func ToCamelCase(s string) string {
 	stringArray := strings.Split(s, "-")
-	stringArray[1] = strings.Title(stringArray[1])
+	for i, e := range stringArray {
+		if i == 0 {
+			continue
+		}
+		stringArray[i] = strings.Title(e)
+	}
+
 	return strings.Join(stringArray, "")
 }
